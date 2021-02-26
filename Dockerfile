@@ -9,7 +9,7 @@ RUN apt-get update -y && \
         git \
         ffmpeg && \
     git clone https://github.com/subinps/MusicPlayer-Heroku.git && \
-    cd MusicPlayer && \
+    cd MusicPlayer-Heroku && \
     git clone https://github.com/pytgcalls/pytgcalls.git && \
     cd pytgcalls/ && \
     npm install && \
@@ -18,8 +18,7 @@ RUN apt-get update -y && \
     npm install && \
     cd ../../ && \
     pip3 install -r requirements.txt && \
-    cd /MusicPlayer && \
+    cd /MusicPlayer-Heroku && \
     pip3 install -U -r requirements.txt
-WORKDIR /MusicPlayer
-COPY config.py /MusicPlayer/config.py
+WORKDIR /MusicPlayer-Heroku
 CMD ["python3" "main.py"]
