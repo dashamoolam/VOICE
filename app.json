@@ -34,6 +34,6 @@
         "description": "Maximum duration of songs that users can request(in minutes).",
         "value": "7",
         "required": false
-      },
+      }
     }
 }
